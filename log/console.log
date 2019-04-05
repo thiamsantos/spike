@@ -1,0 +1,122 @@
+2019-04-04 19:51:43.402 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 19:51:43.405 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 19:51:43.406 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 19:51:43.409 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 19:51:43.410 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 19:51:43.410 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 19:51:43.410 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 19:51:43.416 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 19:51:43.417 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 19:51:43.486 [error] <0.547.0> CRASH REPORT Process <0.547.0> with 0 neighbours exited with reason: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'spike_test' in vhost '/'">>}},{gen_server,call,[<0.559.0>,{subscribe,{'basic.consume',0,<<"spike_test">>,<<>>,false,false,false,false,[]},<0.561.0>},60000]}} in gen_server:call/3 line 223
+2019-04-04 19:52:43.568 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 19:52:43.571 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 19:52:43.573 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 19:52:43.576 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 19:52:43.577 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 19:52:43.578 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 19:52:43.578 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 19:52:43.585 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 19:52:43.585 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 19:52:43.659 [error] <0.264.0> CRASH REPORT Process <0.264.0> with 0 neighbours exited with reason: {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'spike_test' in vhost '/'">>}},{gen_server,call,[<0.276.0>,{subscribe,{'basic.consume',0,<<"spike_test">>,<<>>,false,false,false,false,[]},<0.278.0>},60000]}} in gen_server:call/3 line 223
+2019-04-04 19:54:29.957 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 19:54:29.959 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 19:54:29.961 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 19:54:29.964 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 19:54:29.965 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 19:54:29.966 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 19:54:29.966 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 19:54:29.972 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 19:54:29.972 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 19:54:30.035 [error] <0.252.0>@Elixir.Spike.Queue.Producer:init:15 Supervisor 'Elixir.Spike.Supervisor' had child 'Elixir.Spike.Queue.Producer' started with 'Elixir.Spike.Queue.Producer':start_link([{queue_name,<<"spike_test">>}]) at undefined exit with reason no match of right hand value {ok,#{consumer_count => 0,message_count => 0,queue => <<"hello">>}} in 'Elixir.Spike.Queue.Producer':init/1 line 15 in context start_error
+2019-04-04 19:55:01.930 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 19:55:01.933 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 19:55:01.934 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 19:55:01.937 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 19:55:01.937 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 19:55:01.938 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 19:55:01.938 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 19:55:01.943 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 19:55:01.943 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 19:55:02.021 [error] <0.264.0>@Elixir.Spike.Queue.Consumer:init:15 CRASH REPORT Process <0.264.0> with 0 neighbours crashed with reason: no match of right hand value {ok,#{consumer_count => 0,message_count => 0,queue => <<"spike_test">>}} in 'Elixir.Spike.Queue.Consumer':init/1 line 15
+2019-04-04 19:55:10.018 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 19:55:10.023 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 19:55:10.024 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 19:55:10.028 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 19:55:10.029 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 19:55:10.029 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 19:55:10.029 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 19:55:10.039 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 19:55:10.040 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 19:55:10.141 [error] <0.247.0>@Elixir.Spike.Queue.Consumer:init:16 Supervisor 'Elixir.Spike.Supervisor' had child 'Elixir.Spike.Queue.Consumer' started with 'Elixir.Spike.Queue.Consumer':start_link([{queue_name,<<"spike_test">>}]) at undefined exit with reason no match of right hand value {ok,<<"amq.ctag-mWhgSjsbBbA4Alnhn1bfWQ">>} in 'Elixir.Spike.Queue.Consumer':init/1 line 16 in context start_error
+2019-04-04 19:55:42.747 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 19:55:42.749 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 19:55:42.751 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 19:55:42.754 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 19:55:42.754 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 19:55:42.755 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 19:55:42.755 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 19:55:42.761 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 19:55:42.761 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 19:55:42.845 [error] <0.264.0>@Elixir.Spike.Queue.Consumer:handle_info:21 gen_server 'Elixir.Spike.Queue.Consumer' terminated with reason: no function clause matching 'Elixir.Spike.Queue.Consumer':handle_info({basic_consume_ok,#{consumer_tag => <<"amq.ctag-8XDfe9KMWKkl2qzaLDmmHg">>}}, #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',...},...},...}) line 21
+2019-04-04 19:55:42.845 [info] <0.42.0> Application spike started on node nonode@nohost
+2019-04-04 19:55:42.873 [error] <0.264.0>@Elixir.Spike.Queue.Consumer:handle_info:21 CRASH REPORT Process 'Elixir.Spike.Queue.Consumer' with 0 neighbours crashed with reason: no function clause matching 'Elixir.Spike.Queue.Consumer':handle_info({basic_consume_ok,#{consumer_tag => <<"amq.ctag-8XDfe9KMWKkl2qzaLDmmHg">>}}, #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',...},...},...}) line 21
+2019-04-04 19:55:42.874 [error] <0.247.0>@Elixir.Spike.Queue.Consumer:handle_info:21 Supervisor 'Elixir.Spike.Supervisor' had child 'Elixir.Spike.Queue.Consumer' started with 'Elixir.Spike.Queue.Consumer':start_link([{queue_name,<<"spike_test">>}]) at <0.264.0> exit with reason no function clause matching 'Elixir.Spike.Queue.Consumer':handle_info({basic_consume_ok,#{consumer_tag => <<"amq.ctag-8XDfe9KMWKkl2qzaLDmmHg">>}}, #{channel => #{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',...},...},...}) line 21 in context child_terminated
+2019-04-04 19:55:43.002 [warning] <0.220.0> lager_error_logger_h dropped 41 messages in the last second that exceeded the limit of 50 messages/sec
+2019-04-04 19:56:42.017 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 19:56:42.022 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 19:56:42.024 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 19:56:42.027 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 19:56:42.029 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 19:56:42.030 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 19:56:42.030 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 19:56:42.041 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 19:56:42.041 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 19:56:42.122 [info] <0.42.0> Application spike started on node nonode@nohost
+2019-04-04 19:56:56.699 [error] <0.253.0> gen_server 'Elixir.Spike.Queue.Producer' terminated with reason: #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer Spike.Queue.Producer but no handle_call/3 clause was provided">>} in 'Elixir.Spike.Queue.Producer':handle_call/3 line 754
+2019-04-04 19:56:56.705 [error] <0.253.0> CRASH REPORT Process 'Elixir.Spike.Queue.Producer' with 0 neighbours crashed with reason: #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer Spike.Queue.Producer but no handle_call/3 clause was provided">>} in 'Elixir.Spike.Queue.Producer':handle_call/3 line 754
+2019-04-04 19:56:56.706 [error] <0.252.0> Supervisor 'Elixir.Spike.Supervisor' had child 'Elixir.Spike.Queue.Producer' started with 'Elixir.Spike.Queue.Producer':start_link([{queue_name,<<"spike_test">>}]) at <0.253.0> exit with reason #{'__exception__' => true,'__struct__' => 'Elixir.RuntimeError',message => <<"attempted to call GenServer Spike.Queue.Producer but no handle_call/3 clause was provided">>} in 'Elixir.Spike.Queue.Producer':handle_call/3 line 754 in context child_terminated
+2019-04-04 19:56:57.004 [warning] <0.225.0> lager_error_logger_h dropped 6 messages in the last second that exceeded the limit of 50 messages/sec
+2019-04-04 19:57:24.602 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 19:57:24.605 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 19:57:24.606 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 19:57:24.609 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 19:57:24.610 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 19:57:24.611 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 19:57:24.611 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 19:57:24.616 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 19:57:24.616 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 19:57:24.683 [info] <0.42.0> Application spike started on node nonode@nohost
+2019-04-04 21:46:29.433 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 21:46:29.437 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 21:46:29.438 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 21:46:29.441 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 21:46:29.442 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 21:46:29.442 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 21:46:29.442 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 21:46:29.448 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 21:46:29.448 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 21:46:29.544 [error] <0.269.0>@Elixir.AMQP.Queue:bind CRASH REPORT Process <0.269.0> with 0 neighbours crashed with reason: call to undefined function 'Elixir.AMQP.Queue':bind(#{'__struct__' => 'Elixir.AMQP.Channel',conn => #{'__struct__' => 'Elixir.AMQP.Connection',pid => <0.272.0>},...}, <<"spike_test">>)
+2019-04-04 21:46:50.988 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 21:46:50.989 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 21:46:50.991 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 21:46:50.995 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 21:46:50.995 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 21:46:50.996 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 21:46:50.996 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 21:46:51.002 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 21:46:51.002 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 21:46:51.071 [info] <0.42.0> Application spike started on node nonode@nohost
+2019-04-04 21:49:36.042 [info] <0.42.0> Application lager started on node nonode@nohost
+2019-04-04 21:49:36.045 [info] <0.42.0> Application xmerl started on node nonode@nohost
+2019-04-04 21:49:36.047 [info] <0.42.0> Application jsx started on node nonode@nohost
+2019-04-04 21:49:36.051 [info] <0.42.0> Application ranch started on node nonode@nohost
+2019-04-04 21:49:36.052 [info] <0.42.0> Application ranch_proxy_protocol started on node nonode@nohost
+2019-04-04 21:49:36.052 [info] <0.42.0> Application recon started on node nonode@nohost
+2019-04-04 21:49:36.052 [info] <0.42.0> Application rabbit_common started on node nonode@nohost
+2019-04-04 21:49:36.058 [info] <0.42.0> Application amqp_client started on node nonode@nohost
+2019-04-04 21:49:36.058 [info] <0.42.0> Application amqp started on node nonode@nohost
+2019-04-04 21:49:36.131 [info] <0.42.0> Application spike started on node nonode@nohost
+2019-04-04 21:49:39.795 [error] <0.269.0> gen_server 'Elixir.Spike.Queue.Consumer' terminated with reason: #{'__exception__' => true,'__struct__' => 'Elixir.Protocol.UndefinedError',description => <<>>,protocol => 'Elixir.String.Chars',value => #{something => <<"else">>}} in 'Elixir.String.Chars':'impl_for!'/1 line 3
+2019-04-04 21:49:39.800 [error] <0.269.0> CRASH REPORT Process 'Elixir.Spike.Queue.Consumer' with 0 neighbours crashed with reason: #{'__exception__' => true,'__struct__' => 'Elixir.Protocol.UndefinedError',description => <<>>,protocol => 'Elixir.String.Chars',value => #{something => <<"else">>}} in 'Elixir.String.Chars':'impl_for!'/1 line 3
+2019-04-04 21:49:39.800 [error] <0.252.0> Supervisor 'Elixir.Spike.Supervisor' had child 'Elixir.Spike.Queue.Consumer' started with 'Elixir.Spike.Queue.Consumer':start_link([{queue_name,<<"spike_test">>}]) at <0.269.0> exit with reason #{'__exception__' => true,'__struct__' => 'Elixir.Protocol.UndefinedError',description => <<>>,protocol => 'Elixir.String.Chars',value => #{something => <<"else">>}} in 'Elixir.String.Chars':'impl_for!'/1 line 3 in context child_terminated
+2019-04-04 21:49:40.001 [warning] <0.225.0> lager_error_logger_h dropped 6 messages in the last second that exceeded the limit of 50 messages/sec
