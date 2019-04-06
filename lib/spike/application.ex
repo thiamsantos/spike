@@ -10,7 +10,7 @@ defmodule Spike.Application do
     children = [
       # Starts a worker by calling: Spike.Worker.start_link(arg)
       # {Spike.Worker, arg}
-      {Spike.Queue, exchange_name: "spike_test"}
+      {Spike.MyQueue, queue_name: "spike_test", consumers_size: 8}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

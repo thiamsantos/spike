@@ -1,27 +1,28 @@
 defmodule Spike.Queue do
-  use Supervisor
+  @callback enqueue(module(), any()) :: :ok
 
-  def start_link(opts) do
-    Supervisor.start_link(__MODULE__, opts, name: __MODULE__)
-  end
+  defmacro __using__(_opts) do
+    quote do
+      @behaviour Spike.Queue
 
-  @impl true
-  def init(opts) do
-    exchange_name = Keyword.fetch!(opts, :exchange_name)
+      def child_spec(opts) do
+        %{
+          id: __MODULE__,
+          start: {__MODULE__, :start_link, [opts]},
+          type: :supervisor
+        }
+      end
 
-    consumers = 1..System.schedulers_online()
-    |> Enum.map(fn number ->
-      Supervisor.child_spec({Spike.Queue.Consumer, exchange_name: exchange_name}, id: {Spike.Queue.Consumer, number})
-    end)
-    |> IO.inspect()
+      def start_link(opts) do
+        Spike.Queue.Supervisor.start_link(__MODULE__, opts)
+      end
 
-    children = [{Spike.Queue.Producer, exchange_name: exchange_name} | consumers]
-
-    Supervisor.init(children, strategy: :one_for_one)
-  end
-
-  def enqueue(module, args) do
-    GenServer.call(Spike.Queue.Producer, {:enqueue, module, args})
+      @impl true
+      def enqueue(module, args) do
+        GenServer.call(Module.concat(__MODULE__, "Producer"), {:enqueue, module, args})
+      end
+    end
   end
 end
-# Spike.Queue.enqueue(Spike.Worker, %{something: "else"})
+
+# Spike.MyQueue.enqueue(Spike.MyWorker, %{something: "else"})

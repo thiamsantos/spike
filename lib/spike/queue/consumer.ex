@@ -7,14 +7,12 @@ defmodule Spike.Queue.Consumer do
 
   @impl true
   def init(opts) do
-    exchange_name = Keyword.fetch!(opts, :exchange_name)
+    queue_name = Keyword.fetch!(opts, :queue_name)
 
     {:ok, connection} = AMQP.Connection.open()
     {:ok, channel} = AMQP.Channel.open(connection)
 
-    :ok = AMQP.Exchange.declare(channel, exchange_name, :fanout)
-    {:ok, %{queue: queue_name}} = AMQP.Queue.declare(channel, "", exclusive: true)
-    :ok = AMQP.Queue.bind(channel, queue_name, exchange_name)
+    {:ok, _} = AMQP.Queue.declare(channel, queue_name)
     {:ok, _} = AMQP.Basic.consume(channel, queue_name)
 
     {:ok, %{queue_name: queue_name, channel: channel}}
@@ -30,8 +28,7 @@ defmodule Spike.Queue.Consumer do
   end
 
   @impl true
-  def handle_info(other, state) do
-    IO.inspect(other, label: :other)
+  def handle_info(_other, state) do
     {:noreply, state}
   end
 end
