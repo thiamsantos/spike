@@ -1,4 +1,5 @@
-defmodule Spike.Queue.Supervisor do
+defmodule Spike.Supervisor do
+  @moduledoc false
   use Supervisor
 
   def start_link(mod, opts) do
@@ -13,14 +14,14 @@ defmodule Spike.Queue.Supervisor do
     consumers =
       1..consumers_size
       |> Enum.map(fn number ->
-        Supervisor.child_spec({Spike.Queue.Consumer, queue_name: queue_name},
+        Supervisor.child_spec({Spike.Consumer, queue_name: queue_name},
           id: {Module.concat(mod, "Consumer"), number}
         )
       end)
 
     producer_spec =
       Supervisor.child_spec(
-        {Spike.Queue.Producer, name: Module.concat(mod, "Producer"), queue_name: queue_name},
+        {Spike.Producer, name: Module.concat(mod, "Producer"), queue_name: queue_name},
         id: Module.concat(mod, "Producer")
       )
 

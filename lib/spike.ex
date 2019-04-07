@@ -1,18 +1,26 @@
 defmodule Spike do
-  @moduledoc """
-  Documentation for Spike.
-  """
+  @callback enqueue(module(), any()) :: :ok
 
-  @doc """
-  Hello world.
+  defmacro __using__(_opts) do
+    quote do
+      @behaviour Spike
 
-  ## Examples
+      def child_spec(opts) do
+        %{
+          id: __MODULE__,
+          start: {__MODULE__, :start_link, [opts]},
+          type: :supervisor
+        }
+      end
 
-      iex> Spike.hello()
-      :world
+      def start_link(opts) do
+        Spike.Supervisor.start_link(__MODULE__, opts)
+      end
 
-  """
-  def hello do
-    :world
+      @impl true
+      def enqueue(module, args) do
+        GenServer.call(Module.concat(__MODULE__, "Producer"), {:enqueue, module, args})
+      end
+    end
   end
 end
