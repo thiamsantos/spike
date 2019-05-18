@@ -1,3 +1,3 @@
 defmodule Spike.Worker do
-  @callback perform(any) :: any()
+  @callback perform(any) :: :ok | {:error, any()}
 end

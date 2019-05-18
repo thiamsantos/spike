@@ -22,6 +22,8 @@ defmodule SpikeTest do
       {:ok, channel} = AMQP.Channel.open(connection)
 
       {:ok, _} = AMQP.Queue.delete(channel, queue_name)
+      :ok = AMQP.Channel.close(channel)
+      :ok = AMQP.Connection.close(connection)
     end)
   end
 

@@ -22,10 +22,15 @@ defmodule Spike.Consumer do
   @impl true
   def handle_info({:basic_deliver, payload, meta}, %{channel: channel} = state) do
     {module, args} = :erlang.binary_to_term(payload)
-    apply(module, :perform, [args])
-    :ok = AMQP.Basic.ack(channel, meta.delivery_tag)
 
-    {:noreply, state}
+    case apply(module, :perform, [args]) do
+      :ok ->
+        :ok = AMQP.Basic.ack(channel, meta.delivery_tag)
+        {:noreply, state}
+
+      {:error, _reason} ->
+        {:noreply, state}
+    end
   end
 
   @impl true
