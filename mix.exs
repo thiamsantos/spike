@@ -19,7 +19,8 @@ defmodule Spike.MixProject do
 
   defp deps do
     [
-      {:amqp, "~> 1.1"}
+      {:amqp, "~> 1.1"},
+      {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
     ]
   end
 end

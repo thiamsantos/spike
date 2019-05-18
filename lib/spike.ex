@@ -1,4 +1,7 @@
 defmodule Spike do
+  @moduledoc """
+  Spike
+  """
   @callback enqueue(module(), any()) :: :ok
 
   defmacro __using__(_opts) do
