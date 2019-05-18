@@ -13,9 +13,11 @@ defmodule SpikeTest do
     use Spike
   end
 
+  @consumer_size 8
+
   setup do
     queue_name = "something"
-    start_supervised({MyQueue, queue_name: queue_name, consumers_size: 8})
+    start_supervised({MyQueue, queue_name: queue_name, consumers_size: @consumer_size})
 
     on_exit(fn ->
       {:ok, connection} = AMQP.Connection.open()
@@ -50,6 +52,11 @@ defmodule SpikeTest do
              Current App Version: #{app_version}
              Readme Install Versions: #{readme_versions}
              """
+    end
+
+    test "start the amount of passed consumers + one producer" do
+      total = @consumer_size + 1
+      assert %{active: ^total} = Supervisor.count_children(MyQueue.Supervisor)
     end
   end
 end
