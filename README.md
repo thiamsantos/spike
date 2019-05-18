@@ -1,5 +1,9 @@
 # Spike
 
+[![Build Status](https://travis-ci.com/thiamsantos/spike.svg?branch=master)](https://travis-ci.com/thiamsantos/spike)
+[![Hex.pm Version](http://img.shields.io/hexpm/v/spike.svg?style=flat)](https://hex.pm/packages/spike)
+[![Coverage Status](https://coveralls.io/repos/github/thiamsantos/spike/badge.svg?branch=master)](https://coveralls.io/github/thiamsantos/spike?branch=master)
+
 **TODO: Add description**
 
 ## Installation
@@ -21,8 +25,8 @@ be found at [https://hexdocs.pm/spike](https://hexdocs.pm/spike).
 
 ## TODO
 
-- [] Setup CI
-- [] Setup deploy
+- [x] Setup CI
+- [x] Setup deploy
 - [] Add documentation
 - [] Add architecture diagram
 - [] Add tests
