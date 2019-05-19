@@ -3,7 +3,7 @@ defmodule Spike.Supervisor do
   use Supervisor
 
   def start_link(mod, opts) do
-    Supervisor.start_link(__MODULE__, {mod, opts}, name: Module.concat(mod, "Supervisor"))
+    Supervisor.start_link(__MODULE__, {mod, opts}, name: mod)
   end
 
   @impl true
